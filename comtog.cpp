@@ -24,6 +24,7 @@ int main(int argc, char ** argv) {
 		ifstream fin(argv[1]);
 		if (!fin.is_open()) {
 			cerr << "Can't read from " << argv[1] << endl;
+			return 1;
 		}
 		string s;
 		int jeszcze = 0;
@@ -42,6 +43,7 @@ int main(int argc, char ** argv) {
 		ofstream fout(argv[1]);
 		if (!fout.is_open()) {
 			cerr << "Can't write to " << argv[1] << endl;
+			return 1;
 		}
 		for (string & s : v) fout << s << endl;
 	}
