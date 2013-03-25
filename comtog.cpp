@@ -12,7 +12,7 @@ int main(int argc, char ** argv) {
 		cerr << "Toggled lines are printed on output (changed)." << endl;
 		cerr << "Provided excessive argument, performs a dry run." << endl;
 		cerr << endl;
-		cerr << "	Usage: " << argv[0] << " <file> <pattern> <n> <dry?>" << endl;
+		cerr << "	Usage: " << argv[0] << " <file> <pattern> <n> [<dry>]" << endl;
 		cerr << endl;
 		return 1;
 	}
