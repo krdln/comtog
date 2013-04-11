@@ -11,7 +11,7 @@ int main(int argc, char ** argv) {
 	
 	if (argc == 4) valid_options = true;
 	if (argc == 5) {
-		if (argv[4][0] == 's') present = true, valid_options = true;
+		if (argv[4][0] == 's') dry = true, present = true, valid_options = true;
 		if (argv[4][0] == 'd') dry = true, valid_options = true;
 	}
 	
@@ -21,7 +21,7 @@ int main(int argc, char ** argv) {
 		cerr << "For each line containg pattern, toggles #-comment for next n-1 of them." << endl;
 		cerr << "Toggled lines are printed on output (changed)." << endl;
 		cerr << "Provided excessive argument, performs a dry run," << endl;
-		cerr << "or shows present state instead of changed." << endl;
+		cerr << "or shows present state instead of toggling anything." << endl;
 		cerr << endl;
 		cerr << "	Usage: " << argv[0] << " <file> <pattern> <n> [dry|show]" << endl;
 		cerr << endl;
